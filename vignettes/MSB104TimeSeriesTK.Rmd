@@ -1,0 +1,30 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+vign <- browseVignettes(all=T)
+names(vign)
+```
+
+```{r}
+.libPaths()
+```
+
+
+```{r}
+library(MSB104TimeSeriesTK)
+```
+
+```{r}
+usethis::use_data_raw()
+file.edit("data-raw/DATASET.R")
+```
+
+```{r}
+DATASET <- iris
+usethis::use_data(DATASET, overwrite = TRUE)
+```
+
+
